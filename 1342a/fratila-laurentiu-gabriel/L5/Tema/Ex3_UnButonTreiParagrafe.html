@@ -1,20 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Modificari paragrafe</title>
+  <head>
+    <title>Modificari paragrafe</title>
+    <script>
+      function myFunction() {
+        var p1 = document.getElementById("p1");
+        var p2 = document.getElementById("p2");
+        var p3 = document.getElementById("p3");
+        var button = document.getElementById("butt");
 
-</head>
-<body>
+        if (button.innerHTML == "Apasa-ma!") {
+          p1.innerHTML = "Acesta este paragraful 1";
+          p1.style.fontSize = "25px";
+          p1.style.color = "red";
+          p1.style.background = "pink"
 
-<h1>Modificari paragrafe la click pe buton</h1>
+          p2.innerHTML = "Acesta este paragraful 2";
+          p2.style.fontSize = "25px";
+          p2.style.color = "blue";
+          p2.style.background = "yellow";
 
-<p>Acesta este un paragraf</p>
+          p3.innerHTML = "Acesta este paragraful 3";
+          p3.style.fontSize = "25px";
+          p3.style.color = "green";
+        } else {
+          button.innerHTML = "Apasa-ma!";
+          button.style.fontSize = "12px";
+          button.style.color = "black";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Modificari paragrafe la click pe buton</h1>
 
-<p>Si acesta este un paragraf</p>
+    <p id="p1">Acesta este un paragraf</p>
 
-<p>Acesta este inca un paragraf</p>
+    <p id="p2">Si acesta este un paragraf</p>
 
-<button type="button" >Apasa-ma!</button>
+    <p id="p3">Acesta este inca un paragraf</p>
 
-</body>
-</html> 
+    <button id="butt" type="button" onclick="myFunction()">Apasa-ma!</button>
+  </body>
+</html>

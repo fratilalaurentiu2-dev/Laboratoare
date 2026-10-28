@@ -1,16 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Modificari cu JavaScript in tag</title>
+  <head>
+    <title>Modificari cu JavaScript in tag</title>
+  </head>
+  <body>
+    <h1>Modificari paragraf la click pe buton</h1>
 
-</head>
-<body>
+    <p id="p1">Paragraf de modificat</p>
 
-<h1>Modificari paragraf la click pe buton</h1>
-
-<p id="p1">Paragraf de modificat</p>
-
-<button >Click!</button>
-
-</body>
-</html> 
+    <button
+      id="butt"
+      type="button"
+      onclick="
+        var x = document.getElementById('p1');
+        x.style.fontSize = '35px';
+        x.style.color = 'red';
+        x.style.backgroundColor = 'pink';
+        x.innerHTML = 'Paragraf modificat!';
+      "
+    >
+      Click!!
+    </button>
+  </body>
+</html>
