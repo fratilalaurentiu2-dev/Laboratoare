@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Galerie Foto - Exercițiul L6_D</title>
+    <script>
+      let imagini = [
+        "img/pisici.jpg",
+        "img/munti.jpg",
+        "img/caini.jpg",
+        "img/mare.jpg",
+      ];
+      let currentIndex = 0; // Poziția curentă în tablou (0 pentru prima imagine)
+
+      function actualizeazaGalerie() {
+        let imgElement = document.getElementById("galerie-img");
+        let textElement = document.getElementById("info-text");
+
+        imgElement.src = imagini[currentIndex];
+
+        textElement.innerHTML =
+          "Imaginea " + (currentIndex + 1) + " din " + imagini.length;
+      }
+
+      function inainte() {
+        currentIndex = (currentIndex + 1) % imagini.length;
+        actualizeazaGalerie();
+      }
+
+      function inapoi() {
+        currentIndex = (currentIndex - 1 + imagini.length) % imagini.length;
+        actualizeazaGalerie();
+      }
+    </script>
+  </head>
+  <body onload="actualizeazaGalerie()">
+    <h1>Galerie Imagini</h1>
+
+    <div>
+      <button type="button" onclick="inapoi()">Înapoi</button>
+
+      <button type="button" onclick="inainte()">Înainte</button>
+    </div>
+
+    <br />
+
+    <div>
+      <img
+        id="galerie-img"
+        src=""
+        alt="Galerie foto"
+        width="300"
+        height="225"
+      />
+    </div>
+
+    <p id="info-text"></p>
+  </body>
+</html>

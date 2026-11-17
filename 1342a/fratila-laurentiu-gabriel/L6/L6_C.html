@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function changeColor(id) {
+        var c = prompt("Introduceți noua culoare al paragrafului:", "culoare");
+        if (CSS.supports("color", c)) {
+          document.getElementById(id).style.color = c;
+        } else {
+          window.alert("Culoarea nu este valida");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="header1" onclick="changeColor('p')">Titlu foarte inspirat</h1>
+    <p id="p">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sit
+      voluptatem, omnis ipsa sed fugiat eaque quia expedita nihil deleniti?
+      Quisquam ullam distinctio ea temporibus nesciunt, in consequuntur
+      recusandae quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Aspernatur, saepe, voluptas fugit provident beatae sequi enim
+      aliquid, non delectus at dolores commodi et rerum. Quae magni nemo ipsum a
+      odit.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="par">Text initial</p>
+
+    <script>
+      var text = prompt(
+        "Introduceți noul text al paragrafului:",
+        "Text initial",
+      );
+      if (text !== null && text !== "") {
+        document.getElementById("par").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>

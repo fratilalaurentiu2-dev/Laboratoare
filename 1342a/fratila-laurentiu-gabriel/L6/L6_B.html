@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function changeContent(p) {
+        var text = prompt(
+          "Introduceți noul text al paragrafului:",
+          "Text initial",
+        );
+        if (text !== null && text !== "") {
+          document.getElementById(p).innerHTML = text;
+        }
+      }
+      function swapContent(p1, p2) {
+        var text1 = document.getElementById(p1).innerHTML;
+        var text2 = document.getElementById(p2).innerHTML;
+
+        document.getElementById(p1).innerHTML = text2;
+        document.getElementById(p2).innerHTML = text1;
+      }
+    </script>
+  </head>
+  <body>
+    <button onClick="swapContent('p1','p2')">OK</button>
+    <p id="p1" onClick="changeContent('p1')" style="font: 1em sans-serif">
+      Primul paragraf
+    </p>
+    <p id="p2" onClick="changeContent('p2')" style="font: 2em inter">
+      Al doilea paragraf
+    </p>
+  </body>
+</html>
